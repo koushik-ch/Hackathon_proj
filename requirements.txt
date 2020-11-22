@@ -1,0 +1,2 @@
+Run the app.py file which provides a local url link for the website
+paste that link and run the web application

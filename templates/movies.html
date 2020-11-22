@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <br>
+    <div><h4>list of available Movies:</h4></div>
+    <br>
+    {% for list in movies %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" href="https://www.google.com/maps/search/{{list.theatre}}" target="_blank">{{list.theatre}} </a>
+          <small class="text-muted">{{ list.Show}}</small>
+        </div>
+        <h2><a class="article-title" href="">{{ list.name }}</a></h2>
+        <p class="article-content">Rs.{{ list.price }}</p>
+        <p class="article-content">Cast: {{ list.cast }}</p>
+      </div>
+    </article>
+    {% endfor %}
+{% endblock content %}

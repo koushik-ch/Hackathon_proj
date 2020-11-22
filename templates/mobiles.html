@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <br>
+    <div><h4>list of available Mobiles:</h4></div>
+    <br>
+    {% for list in mobiles %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" href="https://www.google.com/maps/search/{{list.location}}" target="_blank">{{list.location}} </a>
+          <small class="text-muted">{{ list.usage}}</small>
+        </div>
+        <h2><a class="article-title" href="">{{ list.name }}</a></h2>
+        <p class="article-content">Rs.{{ list.price }}</p>
+        <p class="article-content">Cast: {{ list.size }}</p>
+      </div>
+    </article>
+    {% endfor %}
+{% endblock content %}
